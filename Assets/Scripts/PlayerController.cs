@@ -1,4 +1,5 @@
 using UnityEngine;
+using MMO.Animation;
 
 namespace MMO.Player
 {

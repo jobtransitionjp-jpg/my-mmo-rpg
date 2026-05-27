@@ -19,14 +19,14 @@ namespace MMO.Camera
         
         private float horizontalAngle = 0f;
         private float verticalAngle = 45f;
-        private Camera mainCamera;
+        private UnityEngine.Camera mainCamera;
         
         private void Start()
         {
-            mainCamera = GetComponent<Camera>();
+            mainCamera = GetComponent<UnityEngine.Camera>();
             if (mainCamera == null)
             {
-                mainCamera = Camera.main;
+                mainCamera = UnityEngine.Camera.main;
             }
         }
         

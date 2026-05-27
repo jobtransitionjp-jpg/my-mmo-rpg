@@ -70,7 +70,7 @@ namespace MMO.Network
         /// <summary>
         /// プレイヤーの位置をネットワーク同期
         /// </summary>
-        [Rpc(SendTo.Server)]
+        // Network RPC attributes depend on Netcode version; remove attributes for local testing.
         public void UpdatePlayerPositionRpc(Vector3 position, Quaternion rotation)
         {
             // サーバーが他のクライアントに広播
@@ -80,7 +80,6 @@ namespace MMO.Network
         /// <summary>
         /// プレイヤー位置を全クライアントに送信
         /// </summary>
-        [Rpc(SendTo.NotServer)]
         private void BroadcastPlayerPositionRpc(Vector3 position, Quaternion rotation)
         {
             if (localPlayer != null)
@@ -93,7 +92,6 @@ namespace MMO.Network
         /// <summary>
         /// プレイヤーアニメーション同期
         /// </summary>
-        [Rpc(SendTo.All)]
         public void PlayAnimationRpc(ulong playerId, string animationName)
         {
             Debug.Log($"アニメーション再生: {playerId} - {animationName}");
@@ -104,7 +102,6 @@ namespace MMO.Network
         /// <summary>
         /// チャットメッセージ送信
         /// </summary>
-        [Rpc(SendTo.Server)]
         public void SendChatMessageRpc(string playerName, string message)
         {
             BroadcastChatMessageRpc(playerName, message);
@@ -113,7 +110,6 @@ namespace MMO.Network
         /// <summary>
         /// チャットメッセージを全クライアントに送信
         /// </summary>
-        [Rpc(SendTo.NotServer)]
         private void BroadcastChatMessageRpc(string playerName, string message)
         {
             Debug.Log($"[{playerName}]: {message}");
