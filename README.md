@@ -179,3 +179,27 @@ Window → TextMesh Pro → Import TMP Essentials
 ## 連絡先
 
 質問や提案がある場合は、プロジェクトのissueを作成してください。
+
+## オンライン公開 (GitHub Pages)
+
+このリポジトリは GitHub Pages で公開できます。現在の公開先（作成済み）:
+
+- GitHub Pages URL: https://jobtransitionjp-jpg.github.io/my-mmo-rpg
+
+簡単な公開手順（Unity WebGL ビルド後）:
+
+1. Unity で WebGL ビルドを作成し、出力先を `Builds/WebGL/` にする。
+2. ビルド出力の中身を `docs/` フォルダへコピーします（リポジトリのルートに `docs/` があればその中身を上書き）。
+
+```bash
+cd /Users/tsuyosiito/my-mmo-rpg
+cp -r Builds/WebGL/* docs/
+git add docs/
+git commit -m "Add WebGL build for GitHub Pages"
+git push -u origin main
+```
+
+3. GitHub のリポジトリ設定 → `Settings` → `Pages` で `Source` を `main / docs` に設定します。数分で公開されます。
+
+レンタルサーバーへ移行する場合は、`Builds/WebGL/` の中身を FTP/SFTP でアップロードしてください。
+
