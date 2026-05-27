@@ -41,7 +41,7 @@ namespace MMO.Player
             
             if (mainCamera == null)
             {
-                mainCamera = Camera.main?.transform;
+                mainCamera = UnityEngine.Camera.main?.transform;
             }
         }
         

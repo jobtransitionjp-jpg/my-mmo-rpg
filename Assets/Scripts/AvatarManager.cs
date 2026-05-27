@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using MMO.Animation;
 
 namespace MMO.Avatar
 {
