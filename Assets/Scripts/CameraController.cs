@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MMO.Camera
+namespace MMO.Cameras
 {
     /// <summary>
     /// プレイヤーをフォローするカメラシステム
